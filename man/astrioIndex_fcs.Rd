@@ -2,7 +2,7 @@
 \alias{astrioIndex_fcs}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+astrioIndex_fcs
 }
 \description{
 A simple tool to convert "Sort parameter" of Beckman Coulter Astrios sorters to X-sort and Y-sort parameters. Requires as input an fcs file.
