@@ -57,7 +57,7 @@ astrioIndex<- function(ff, out_file = TRUE, out_name="Indexed_file.fcs"){
     XYindex[m,"Y-index"]<-Y
 
   }
-  fcs2<-cbind2(fcs, XYindex)
+  fcs2<-cbind2(ff, XYindex)
   fcs2@description$`$FIL`<-paste0("indexed_", fcs2@description$`$FIL`)
   fcs2@description$FILENAME<-paste0("indexed_", fcs2@description$FILENAME)
   if(out_file==TRUE)
