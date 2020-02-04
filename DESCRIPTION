@@ -1,11 +1,11 @@
-Package: IndexedAstrio
+Package: IndexedAstrios
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Extract sort indices from Beckman Coultes MoFlo sorters (Sort Classifier)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Marco De Zuani
+Maintainer: Marco De Zuani <marco.de.zuani@fnusa.cz>
+Description: IndexedAstrios provide two functions to convert the Sort Classifier parameter provided by Beckman Coulter MoFlo sorters to X-sort and Y-sort indices.
+License: GPL (>=2)
 Encoding: UTF-8
+Imports: flowCore, ggplot2, ggcyto, dplyr
 LazyData: true
