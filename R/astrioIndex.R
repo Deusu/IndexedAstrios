@@ -62,9 +62,9 @@ astrioIndex <- function(ff, out_file = TRUE, out_name="Indexed_file.fcs"){
   fcs2@description$FILENAME<-paste0("indexed_", fcs2@description$FILENAME)
   if(out_file==TRUE){
     write.FCS(fcs2, filename = as.character(out_name))
-    return("Indexed!")
   }
   else {
     return(fcs2)
   }
+  cat("Indexed!\n")
 }
