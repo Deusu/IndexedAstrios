@@ -1,4 +1,4 @@
-astrioIndex<- function(ff, out_file = TRUE, out_name="Indexed_file.fcs"){
+astrioIndex <- function(ff, out_file = TRUE, out_name="Indexed_file.fcs"){
   rows<-1:nrow(ff)
   XYindex<-matrix(nrow = nrow(ff), ncol = 2)
   colnames(XYindex)<-c("X-index","Y-index")
@@ -50,17 +50,21 @@ astrioIndex<- function(ff, out_file = TRUE, out_name="Indexed_file.fcs"){
     }
 
     # Stores X and Y indexes in the m row of the matrix
-    X<-X*10000
-    Y<-Y*10000
+    #X<-X*10000
+    #Y<-Y*10000
 
     XYindex[m,"X-index"]<-X
     XYindex[m,"Y-index"]<-Y
 
   }
-  fcs2<-cbind2(fcs, XYindex)
+  fcs2 <- fr_append_cols(ff, XYindex)
   fcs2@description$`$FIL`<-paste0("indexed_", fcs2@description$`$FIL`)
   fcs2@description$FILENAME<-paste0("indexed_", fcs2@description$FILENAME)
-  if(out_file==TRUE)
-  write.FCS(fcs2, filename = as.character(out_name))
-  return("Indexed!")
+  if(out_file==TRUE){
+    write.FCS(fcs2, filename = as.character(out_name))
+    return("Indexed!")
+  }
+  else {
+    return(fcs2)
+  }
 }
