@@ -40,18 +40,9 @@ astrioIndex <- function(ff, out_file = TRUE, out_name="Indexed_file.fcs"){
       Y1[n]<-zero[n]
     }
 
-    # Invert X1 and convert to integer
+    # Invert Y1 and convert to integer
     rev(Y1)
     Y<-packBits(Y1, "integer")
-
-    # If Y is not zero (=unsorted), than subtract its value to 9
-    if(Y!=0){
-      Y<-9-Y
-    }
-
-    # Stores X and Y indexes in the m row of the matrix
-    #X<-X*10000
-    #Y<-Y*10000
 
     XYindex[m,"X-index"]<-X
     XYindex[m,"Y-index"]<-Y

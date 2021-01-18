@@ -16,7 +16,7 @@ astrioIndex_fcs(fcs, out_file = TRUE, out_name="Indexed_file.fcs")
   Name (and location) of the fcs file to be indexed.
   }
   \item{out_file}{
-  Bolean indicating whether to export the indexed FlowFrame to a new fcs filwe. Default is TRUE.
+  Bolean indicating whether to export the indexed FlowFrame to a new .fcs file. Default is TRUE.
   }
   \item{out_name}{
   Locatiion and name for the file to be exported. By default it exports in the working directory as "Indexed_file.fcs"

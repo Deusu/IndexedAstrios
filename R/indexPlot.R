@@ -1,6 +1,6 @@
 indexPlot <- function(ff, n_col=NA, n_row=NA) {
   if (!("X-index" %in% colnames(ff) & "Y-index" %in% colnames(ff))) {
-    stop("Please use an indexed flowframe. See astrioindex")
+    stop("Please use an indexed flowframe. See astrioIndex")
   }
   indexed <- as.data.frame(ff@exprs)
   indexed <- indexed[which(indexed$`X-index`>=1),]
@@ -22,9 +22,8 @@ indexPlot <- function(ff, n_col=NA, n_row=NA) {
       u <- u+1
     }
   }
-  ggplot(plate, aes(x=X, y=Y,)) +
+  ggplot(plate, aes(x=X, y=Y)) +
     geom_point(aes(size=events)) +
-    scale_size_binned_area() +
     theme_minimal() +
     theme(axis.text.x=element_blank(),
           axis.ticks.x=element_blank()) +
