@@ -36,7 +36,7 @@ astrioIndex_fcs(fcs, out_file = TRUE, out_name="Indexed_file.fcs")
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+Marco De Zuani, PhD
 }
 \note{
 %%  ~~further notes~~
@@ -45,19 +45,11 @@ astrioIndex_fcs(fcs, out_file = TRUE, out_name="Indexed_file.fcs")
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Function \code{\link{astrioIndex}}
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (x)
-{
-  }
+## Index an external .fcs file and save the new indexed .fcs file
+astrioIndex_fcs(fcs = "/data/my_file.fcs",
+                out_file = TRUE,
+                out_name = "/data/my_file_indexed.fcs")
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

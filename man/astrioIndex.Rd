@@ -16,7 +16,7 @@ astrioIndex(ff, out_file = TRUE, out_name="Indexed_file.fcs")
   A 'FlowFrame' object of the fcs file to be analysed.
   }
   \item{out_file}{
-  Bolean indicating whether to export the indexed FlowFrame to a new fcs filwe. Default is TRUE.
+  Bolean indicating whether to export the indexed FlowFrame to a new fcs file. Default is TRUE.
   }
   \item{out_name}{
   Locatiion and name for the file to be exported. By default it exports in the working directory as "Indexed_file.fcs"
@@ -45,19 +45,13 @@ Marco De Zuani, PhD
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{astrioIndex_fcs}}
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+## Index the "fframe" flowframe and save to a new .fcs file
+astrioIndex(ff = fframe, out_file = TRUE, file = "/output/indexed_file.fcs")
 
-## The function is currently defined as
-function (x)
-{
-  }
+## Index the "fframe" flowframe" without saving a new file
+indexed_fframe <- astrioIndex(ff = fframe, out_file = FALSE)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

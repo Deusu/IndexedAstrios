@@ -5,32 +5,35 @@
 indexPlot
 }
 \description{
-Plots results of sort indexing.
+Plots the sorting map. Each dot in the plot corresponds to the physical X, Y position of the microplate used for the sorting.
+The size of each dot is proportional to the number of events sorted at that position/well.
 }
 \usage{
-indexPlot(ff)
+indexPlot(ff, n_col=NA, n_row=NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{ff}{
-flowFrame object, arlready indexed by astrioIndex or astrioIndex_fcs
+flowFrame object, arlready indexed by \code{\link{astrioIndex}} or \code{\link{astrioIndex_fcs}}
 }
+  \item{n_col}{
+  Optional, default is \code{NA}. Sets the number of columns of the microplate used for cell sorting. If \code{NA}, \code{n_col} is set as the higest X-index value.
+  }
+  \item{n_row}{
+  Optional, default is \code{NA}. Sets the number of rows of the microplate used for cell sorting. If \code{NA}, \code{n_row} is set as the higest Y-index value.
+  }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns a \code{ggplot} object.
 }
 \references{
 %% ~put references to the literature/web site here ~
 }
 \author{
-Marco De Zuani
+Marco De Zuani, PhD
 }
 \note{
 %%  ~~further notes~~
@@ -39,19 +42,9 @@ Marco De Zuani
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+Functions \code{\link{astrioIndex}} and \code{\link{astrioIndex_fcs}}.
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+## Plots the sorting map of the "fframe" \code{flowframe} on a 96 well microplate.
+index_plot(ff = fframe, n_col = 12, n_row = 8)
 
-## The function is currently defined as
-function (x)
-{
-  }
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
